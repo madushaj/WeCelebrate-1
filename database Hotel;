@@ -29,4 +29,12 @@ CREATE TABLE Facility (
     PRIMARY  KEY (facilityId)
 );
 
+CREATE TABLE Bill(
+    billNo SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    Amount FLOAT,
+   
+    FOREIGN KEY (customerId, reserationId),
+    PRIMARY  KEY (billNo)
+);
+
             
