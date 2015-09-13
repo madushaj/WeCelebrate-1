@@ -1,0 +1,32 @@
+CREATE DATABASE Hotel; 
+
+CREATE TABLE Customer (
+    customerId VARCHAR (10) NOT NULL ,
+    firstName VARCHAR (50),
+    lastName VARCHAR (50),
+    telephone VARCHAR (25),
+    email VARCHAR (50), 
+    PRIMARY KEY (customerId)
+);
+
+CREATE TABLE Reservation (
+    reservationId SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    event VARCHAR (50),
+    rDate DATE NOT NULL,
+    rTime TIME NOT NULL,
+    durationHours INT,
+    FOREIGN KEY (customerId),
+    PRIMARY KEY (reservationId)
+);
+
+CREATE TABLE Facility (
+    facilityId SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    facilityName VARCHAR (50),
+    facilityType VARCHAR (50),
+    event VARCHAR (50),
+    unitPrice FLOAT,
+   
+    PRIMARY  KEY (facilityId)
+);
+
+            
